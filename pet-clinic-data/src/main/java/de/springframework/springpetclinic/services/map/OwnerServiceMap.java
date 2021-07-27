@@ -2,10 +2,11 @@ package de.springframework.springpetclinic.services.map;
 
 import de.springframework.springpetclinic.model.Owner;
 import de.springframework.springpetclinic.services.CrudService;
+import de.springframework.springpetclinic.services.OwnerService;
 
 import java.util.Set;
 
-public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements CrudService<Owner, Long> {
+public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService {
 
     @Override
     public Set<Owner> findAll() {
