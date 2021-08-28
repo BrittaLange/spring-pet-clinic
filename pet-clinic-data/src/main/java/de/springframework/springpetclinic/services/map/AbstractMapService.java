@@ -26,7 +26,6 @@ public abstract class AbstractMapService<T extends BaseEntity, ID extends Long> 
         {
             throw new RuntimeException("object cannot be null");
         }
-
         return object;
     }
 
@@ -38,6 +37,7 @@ public abstract class AbstractMapService<T extends BaseEntity, ID extends Long> 
         map.entrySet().removeIf(entry -> entry.getValue().equals(object));
     }
 
+    // Method for "auto incrementing" the id.
     private Long getNextId(){
         if (map.isEmpty())
             return 1L;
